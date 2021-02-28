@@ -1,0 +1,184 @@
+body {
+  background-color: darkviolet;
+}
+
+/*# sourceMappingURL=estilos.css.map */
+*   {
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: aliceblue;
+  color: darkslateblue;
+}
+
+.contenedor{
+  font-family: 'Varela Round', sans-serif;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(8, auto);
+
+  grid-template-areas: 
+                       "header header header header"
+                       "home home home home"
+                       "oncobot oncobot oncobot oncobot"
+                       "widget-1 widget-2 widget-3 widget-4"
+                       "laApp laApp laApp laApp"
+                       "ayuda ayuda ayuda ayuda"
+                       "contacto contacto contacto contacto"
+                       "footer footer footer footer";
+}
+
+.contenedor > div,
+.contenedor .home,
+.contenedor .oncobot,
+.contenedor .laApp,
+.contenedor .ayuda,
+.contenedor .contacto,
+.contenedor .footer{
+  padding: 10px;
+ 
+}
+
+
+.header .container .nav-item .nav-link{
+  color: aliceblue;
+}
+
+
+.contenedor .header{
+  background-color:blueviolet;
+  grid-area: header;
+}
+
+.navbar-brand >navbar{
+  background-color: mediumpurple;
+}
+.navbar-brand > img{
+  width: 150px;
+}
+
+.contenedor .home{
+  grid-area: home;
+  background-color: mediumpurple;
+  height: 100%;
+  padding: 20px
+}
+
+.home .cel_home{
+  width: 350px;
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content:space-around;
+}
+.home .parrafo_home{
+  font-size: 12px;
+  color: white;
+  padding: 20px;
+}
+
+.contenedor .oncobot{
+  grid-area: oncobot;
+  background-color: #802D88;
+  height: 100%;
+  padding: 40px;
+
+}
+
+.card{
+  margin: 20px;
+}
+
+.oncobot .robot_oncobot{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenedor .laApp{
+  grid-area: laApp;
+  background-color:wheat;
+  height: 100%;
+  padding: 20px;
+}
+
+.contenedor .ayuda{
+  grid-area: ayuda;
+  background-color: bisque;
+  height: 100%;
+}
+
+.contenedor .contacto{
+  grid-area: contacto;
+  background-color: white;
+  height: 500px;
+}
+
+.contenedor .widget-1, 
+.contenedor .widget-2, 
+.contenedor .widget-3,
+.contenedor .widget-4 {
+  height: 200px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+  border-radius: 5px;
+}
+
+.contenedor .widget-1{
+  grid-area: widget-1;
+  background-image: url('/img/section_oncobot.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.contenedor .widget-2{
+  grid-area: widget-2;
+  background-image: url('/img/section_juegos.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.contenedor .widget-3{
+  grid-area: widget-3;
+  background-image: url('/img/section_eldoc.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+.contenedor .widget-4{
+  grid-area: widget-4;
+  background-image: url('/img/section_ayuda.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; 
+}
+
+.contenedor .footer{
+  background-color: mediumpurple;
+  color: white;
+  grid-area: footer;
+}
+
+
+@media screen and (max-width: 768px){
+  .contenedor{
+      grid-template-areas: 
+                           "header header header header"
+                           "home home home home"
+                           "oncobot oncobot oncobot oncobot"
+                           "widget-1 widget-2 widget-3 widget-4"
+                           "laApp laApp laApp laApp"
+                           "ayuda ayuda ayuda ayuda"
+                           "contacto contacto contacto contacto"
+                           "footer footer footer footer";
+              
+  }
+}
